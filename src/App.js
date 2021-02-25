@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { useState } from 'react'
+
+import FormNota from './components/FormNota'
+import ListaNotas from './components/ListaNotas'
+
+import './App.css'
 
 function App() {
+
+  const [minhasNotas, setMinhasNotas] = useState([])
+
+  function adicionarNota(novaNota) {
+
+    const novoArray = [...minhasNotas, novaNota] 
+
+    setMinhasNotas(novoArray)
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="container">
+      <section className="left">
+        <FormNota aoAdicionarNota={adicionarNota} />
+      </section>
+      <section className="right">
+        <ListaNotas notas={minhasNotas} />
+      </section>
+    </section>
   );
 }
 

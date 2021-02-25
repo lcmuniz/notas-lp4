@@ -1,0 +1,22 @@
+.titulo {
+    width: 90%;
+    border: none;
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px;
+}
+
+.texto {
+    width: 90%;
+    border: none;
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px
+}
+
+.botao-criar {
+    margin: 10px;
+    padding: 10px;
+    background-color: pink;
+
+}
